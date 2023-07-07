@@ -1,0 +1,135 @@
+/*
+    style.css - this stylesheet is linked from index.html to apply styles to the products home page.
+    Add all of your custom styles here.
+*/
+
+* {
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #fafafa;
+    color: #000000;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 10px;
+    margin: 10px;
+    background-color: #fafafa;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 5px;
+  }
+  
+  nav ul div {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+  }
+
+  nav ul div li {
+    padding: 0 10px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+  }
+
+#search-bar {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    background-color: #fafafa;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+#search-bar input {
+    margin: 0 10px;
+    height: 30px;
+    width: 200px;
+}
+
+#search-bar button {
+    height: 30px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    background-color: #fafafa;
+    color: #000000;
+}
+
+#product-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-apart;
+    gap: 20px;
+}
+
+.product-card {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 20px;
+    column-gap: 50px;
+    grid-template-areas:
+    "sku price"
+    "name name"
+    "image image"
+    ". cart";
+    flex: 0 0 350px; /* This means that the card won't grow or shrink, and will always be 350px wide */
+    border: 1px solid #000;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+
+.product-image img {
+    width: 100%;
+    height: auto;
+  }
+
+.sku {
+   grid-area: sku; 
+}
+
+.price {
+    grid-area: price;
+    justify-self: end;
+}
+
+.product-name {
+    grid-area: name;
+}
+
+.product-image {
+    grid-area: image;
+}
+
+.cart {
+    grid-area: cart;
+    justify-self: end;
+}
+
+
+/* #main-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+    text-align: center;
+    justify-self: center;
+    row-gap: 20px;
+    column-gap: 50px;
+    grid-template-areas:
+} */
